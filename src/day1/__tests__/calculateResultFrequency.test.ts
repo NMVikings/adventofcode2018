@@ -5,10 +5,11 @@ import testFunctionOnData from "../../utils/testFunctionOnData";
 import calculateResultFrequency from "../calculateResultFrequency";
 
 describe("test calculateResultFrequency", () => {
-  const getPathtoFixture = path.join.bind(
+  const getPathtoFixture = path.resolve.bind(
     null,
     __dirname,
-    "/__fixtures__/Part One"
+    "__fixtures__",
+    "Part One"
   );
 
   const tests = [

@@ -5,10 +5,11 @@ import testFunctionOnData from "../../utils/testFunctionOnData";
 import findFirstFrequencyReachesTwice from "../findFirstFrequencyReachesTwice";
 
 describe("test findFirstFrequencyReachesTwice", () => {
-  const getPathtoFixture = path.join.bind(
+  const getPathtoFixture = path.resolve.bind(
     null,
     __dirname,
-    "/__fixtures__/Part Two"
+    "__fixtures__",
+    "Part Two"
   );
 
   const tests = [
