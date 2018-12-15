@@ -1,8 +1,8 @@
 const getListOfFrequencies = (startPoint: number, sequence: number[]) => {
   const frequencies: number[] = [];
 
-  sequence.reduce((acc, number) => {
-    const newFrequency = acc + number;
+  sequence.reduce((acc, num) => {
+    const newFrequency = acc + num;
     frequencies.push(newFrequency);
 
     return newFrequency;
@@ -20,7 +20,7 @@ const findFirstFrequencyReachesTwice = (input: string): number => {
     const frequencies = getListOfFrequencies(startPoint, sequence);
     const lastFrequency = frequencies[frequencies.length - 1];
 
-    for (let frequency of frequencies) {
+    for (const frequency of frequencies) {
       if (uniqFrequencies.has(frequency)) {
         return frequency;
       }

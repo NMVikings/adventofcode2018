@@ -1,28 +1,28 @@
-import calculateResultFrequency from "../calculateResultFrequency";
 import getTestInput from "../../utils/getTestInput";
+import calculateResultFrequency from "../calculateResultFrequency";
 
 const partOneTestsPath = __dirname + "/__fixtures__/Part One";
 
 const tests = [
   {
-    name: "input1",
+    expectedResult: 3,
     fixtureName: `input1.txt`,
-    expectedResult: 3
+    name: "input1"
   },
   {
-    name: "input2",
+    expectedResult: 0,
     fixtureName: `input2.txt`,
-    expectedResult: 0
+    name: "input2"
   },
   {
-    name: "input3",
+    expectedResult: -6,
     fixtureName: `input3.txt`,
-    expectedResult: -6
+    name: "input3"
   },
   {
-    name: "challenge",
+    expectedResult: 529,
     fixtureName: `challenge.txt`,
-    expectedResult: 529
+    name: "challenge"
   }
 ];
 

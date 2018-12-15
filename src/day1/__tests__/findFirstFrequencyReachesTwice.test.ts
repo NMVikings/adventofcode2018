@@ -6,29 +6,29 @@ const partOneTestsPath = __dirname + "/__fixtures__/Part Two";
 
 const tests = [
   {
-    name: "input1",
+    expectedResult: 0,
     fixtureName: `input1.txt`,
-    expectedResult: 0
+    name: "input1"
   },
   {
-    name: "input2",
+    expectedResult: 10,
     fixtureName: `input2.txt`,
-    expectedResult: 10
+    name: "input2"
   },
   {
-    name: "input3",
+    expectedResult: 5,
     fixtureName: `input3.txt`,
-    expectedResult: 5
+    name: "input3"
   },
   {
-    name: "input4",
+    expectedResult: 14,
     fixtureName: `input4.txt`,
-    expectedResult: 14
+    name: "input4"
   },
   {
-    name: "challenge",
+    expectedResult: 464,
     fixtureName: `challenge.txt`,
-    expectedResult: 464
+    name: "challenge"
   }
 ];
 
