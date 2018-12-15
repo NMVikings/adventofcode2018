@@ -1,36 +1,38 @@
-import getTestInput from "../../utils/getTestInput";
+import path from "path";
+
+import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import calculateResultFrequency from "../calculateResultFrequency";
 
 describe("test calculateResultFrequency", () => {
-  const partOneTestsPath = __dirname + "/__fixtures__/Part One";
+  const getPathtoFixture = path.join.bind(
+    null,
+    __dirname,
+    "/__fixtures__/Part One"
+  );
+
   const tests = [
     {
       expectedResult: 3,
-      fixtureName: `input1.txt`,
-      name: "input1"
+      name: "input1",
+      pathToFixture: getPathtoFixture("input1.txt")
     },
     {
       expectedResult: 0,
-      fixtureName: `input2.txt`,
-      name: "input2"
+      name: "input2",
+      pathToFixture: getPathtoFixture("input2.txt")
     },
     {
       expectedResult: -6,
-      fixtureName: `input3.txt`,
-      name: "input3"
+      name: "input3",
+      pathToFixture: getPathtoFixture("input3.txt")
     },
     {
       expectedResult: 529,
-      fixtureName: `challenge.txt`,
-      name: "challenge"
+      name: "challenge",
+      pathToFixture: getPathtoFixture("challenge.txt")
     }
   ];
 
-  tests.forEach(({ name, fixtureName, expectedResult }) => {
-    it(name, () => {
-      const input = getTestInput(`${partOneTestsPath}/${fixtureName}`);
-      expect(calculateResultFrequency(input)).toBe(expectedResult);
-    });
-  });
+  testFunctionOnData(tests, calculateResultFrequency);
 });

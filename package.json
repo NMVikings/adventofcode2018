@@ -33,5 +33,7 @@
     "typescript": "^3.2.2",
     "typescript-tslint-plugin": "^0.2.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "@types/lodash": "^4.14.119"
+  }
 }

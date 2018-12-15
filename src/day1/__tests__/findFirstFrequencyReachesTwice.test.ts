@@ -1,41 +1,43 @@
-import getTestInput from "../../utils/getTestInput";
+import path from "path";
+
+import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import findFirstFrequencyReachesTwice from "../findFirstFrequencyReachesTwice";
 
 describe("test findFirstFrequencyReachesTwice", () => {
-  const partTwoTestsPath = __dirname + "/__fixtures__/Part Two";
+  const getPathtoFixture = path.join.bind(
+    null,
+    __dirname,
+    "/__fixtures__/Part Two"
+  );
+
   const tests = [
     {
       expectedResult: 0,
-      fixtureName: `input1.txt`,
-      name: "input1"
+      name: "input1",
+      pathToFixture: getPathtoFixture("input1.txt")
     },
     {
       expectedResult: 10,
-      fixtureName: `input2.txt`,
-      name: "input2"
+      name: "input2",
+      pathToFixture: getPathtoFixture("input2.txt")
     },
     {
       expectedResult: 5,
-      fixtureName: `input3.txt`,
-      name: "input3"
+      name: "input3",
+      pathToFixture: getPathtoFixture("input3.txt")
     },
     {
       expectedResult: 14,
-      fixtureName: `input4.txt`,
-      name: "input4"
+      name: "input4",
+      pathToFixture: getPathtoFixture("input4.txt")
     },
     {
       expectedResult: 464,
-      fixtureName: `challenge.txt`,
-      name: "challenge"
+      name: "challenge",
+      pathToFixture: getPathtoFixture("challenge.txt")
     }
   ];
 
-  tests.forEach(({ name, fixtureName, expectedResult }) => {
-    it(name, () => {
-      const input = getTestInput(`${partTwoTestsPath}/${fixtureName}`);
-      expect(findFirstFrequencyReachesTwice(input)).toBe(expectedResult);
-    });
-  });
+  testFunctionOnData(tests, findFirstFrequencyReachesTwice);
 });
