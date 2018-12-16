@@ -1,17 +1,10 @@
-import path from "path";
-
+import { getPathtoFixturePartTwo } from "../../utils/getPathToFixture";
 import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import findClosestWords from "../findClosestWords";
 
 describe("test findClosestWords", () => {
-  const getPathtoFixture = path.resolve.bind(
-    null,
-    __dirname,
-    "__fixtures__",
-    "Part Two"
-  );
-
+  const getPathtoFixture = getPathtoFixturePartTwo.bind(null, __dirname);
   const tests = [
     {
       expectedResult: "fgij",

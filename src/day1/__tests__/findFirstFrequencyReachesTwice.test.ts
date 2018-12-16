@@ -1,16 +1,10 @@
-import path from "path";
-
+import { getPathtoFixturePartTwo } from "../../utils/getPathToFixture";
 import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import findFirstFrequencyReachesTwice from "../findFirstFrequencyReachesTwice";
 
 describe("test findFirstFrequencyReachesTwice", () => {
-  const getPathtoFixture = path.resolve.bind(
-    null,
-    __dirname,
-    "__fixtures__",
-    "Part Two"
-  );
+  const getPathtoFixture = getPathtoFixturePartTwo.bind(null, __dirname);
 
   const tests = [
     {

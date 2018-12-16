@@ -1,16 +1,10 @@
-import path from "path";
-
+import { getPathtoFixturePartOne } from "../../utils/getPathToFixture";
 import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import calculateResultFrequency from "../calculateResultFrequency";
 
 describe("test calculateResultFrequency", () => {
-  const getPathtoFixture = path.resolve.bind(
-    null,
-    __dirname,
-    "__fixtures__",
-    "Part One"
-  );
+  const getPathtoFixture = getPathtoFixturePartOne.bind(null, __dirname);
 
   const tests = [
     {
