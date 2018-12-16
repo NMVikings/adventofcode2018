@@ -3,7 +3,7 @@ import getTestInput from "./getTestInput";
 interface ITests {
   name: string;
   pathToFixture: string;
-  expectedResult: number;
+  expectedResult: number | string;
 }
 
 const testFunctionOnData = (tests: ITests[], fn: (input: string) => any) => {
