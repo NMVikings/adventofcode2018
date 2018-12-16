@@ -4,7 +4,7 @@ import testFunctionOnData from "../../utils/testFunctionOnData";
 
 import findClosestWords from "../findClosestWords";
 
-describe("test checkInventoryIds", () => {
+describe("test findClosestWords", () => {
   const getPathtoFixture = path.resolve.bind(
     null,
     __dirname,
