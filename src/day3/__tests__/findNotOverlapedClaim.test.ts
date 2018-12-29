@@ -1,9 +1,9 @@
 import { getPathtoFixturePartOne } from "../../utils/getPathToFixture";
 import testFunctionOnData from "../../utils/testFunctionOnData";
 
-import findNotOverLapedClaim from "../findNotOverLapedClaim";
+import findNotOverlapedClaim from "../findNotOverlapedClaim";
 
-describe("test findNotOverLapedClaim", () => {
+describe("test findNotOverlapedClaim", () => {
   const getPathtoFixture = getPathtoFixturePartOne.bind(null, __dirname);
   const tests = [
     {
@@ -18,5 +18,5 @@ describe("test findNotOverLapedClaim", () => {
     }
   ];
 
-  testFunctionOnData(tests, findNotOverLapedClaim);
+  testFunctionOnData(tests, findNotOverlapedClaim);
 });
