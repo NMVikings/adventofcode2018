@@ -14,7 +14,7 @@ test:
 	npx jest
 
 watch-tests:
-	npx jest --watch
+	npx jest --watch --verbose false
 
 test-coverage:
 	npx jest --coverage
